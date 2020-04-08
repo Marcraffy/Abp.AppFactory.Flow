@@ -3,5 +3,6 @@
     public class FlowConfiguration
     {
         public string FlowKey { get; set; }
+        public string FlowEndpoint { get; set; }
     }
 }

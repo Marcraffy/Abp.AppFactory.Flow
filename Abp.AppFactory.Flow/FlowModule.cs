@@ -29,6 +29,7 @@ namespace Abp.AppFactory.Flow
             _appConfiguration = builder.Build();
 
             Configuration.Modules.SendGridConfiguration().FlowKey = _appConfiguration["Flow:Key"];
+            Configuration.Modules.SendGridConfiguration().FlowEndpoint = _appConfiguration["Flow:Endpoint"];
             IocManager.Register<IEmail, Flow>(DependencyLifeStyle.Transient);
         }
 
