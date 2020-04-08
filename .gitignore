@@ -5,3 +5,4 @@
 /.vs/Abp.AppFactory.Flow
 /Abp.AppFactory.Flow/bin/Debug/netstandard2.0
 /Abp.AppFactory.Flow/obj
+/Abp.AppFactory.Flow/bin/Release
