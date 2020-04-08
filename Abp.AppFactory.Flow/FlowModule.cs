@@ -30,7 +30,7 @@ namespace Abp.AppFactory.Flow
 
             Configuration.Modules.SendGridConfiguration().FlowKey = _appConfiguration["Flow:Key"];
             Configuration.Modules.SendGridConfiguration().FlowEndpoint = _appConfiguration["Flow:Endpoint"];
-            IocManager.Register<IEmail, Flow>(DependencyLifeStyle.Transient);
+            IocManager.Register<IEmailService, Flow>(DependencyLifeStyle.Transient);
         }
 
         public override void Initialize()

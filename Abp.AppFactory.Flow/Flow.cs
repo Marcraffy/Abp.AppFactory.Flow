@@ -1,4 +1,5 @@
 ﻿using Abp.AppFactory.Flow.Configuration;
+using Abp.AppFactory.Interfaces;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System.Net.Http;
@@ -6,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Abp.AppFactory.Flow
 {
-    public class Flow : IEmail
+    public class Flow : IEmailService
     {
         private readonly FlowConfiguration config;
 
@@ -31,6 +32,11 @@ namespace Abp.AppFactory.Flow
                 var response = await client.PostAsync(config.FlowEndpoint, content);
                 return await FlowResponse.GetFlowResponse(response);
             }
+        }
+
+        public async Task<IEmailResponse> SendAsync(ISendGridEmail email)
+        {
+            return await SendAsync(email);
         }
     }
 }
