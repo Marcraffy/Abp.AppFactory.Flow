@@ -2,6 +2,7 @@
 using Abp.AppFactory.Interfaces;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
+using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -34,6 +35,7 @@ namespace Abp.AppFactory.Flow
             }
         }
 
+        [Obsolete]
         public async Task<IEmailResponse> SendAsync(ISendGridEmail email)
         {
             return await SendAsync(email);

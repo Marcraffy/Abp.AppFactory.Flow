@@ -8,11 +8,13 @@
     <Product>Flow Module for ABP</Product>
     <Description>Flow Module for ABP</Description>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <AssemblyVersion>1.1.0.0</AssemblyVersion>
+    <FileVersion>1.1.0.0</FileVersion>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Abp" Version="3.8.1" />
-    <PackageReference Include="Abp.AppFactory.Interfaces" Version="2.4.0" />
+    <PackageReference Include="Abp.AppFactory.Interfaces" Version="2.4.1" />
     <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.1.3" />
     <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
   </ItemGroup>
